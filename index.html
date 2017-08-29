@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truck racing game</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mad Trucker</h1>
+        <div class="btn-wrapper">
+            <button id="reset" data-dialog-wrapper="reset-dialog" class="btn btn-pri">Reset</button>
+        </div>
+        <div id="race-results" role="status">Place your Bet to Start the Race</div>
+        <div id="race">
+            <ul>
+                <li></li>
+            </ul>
+            <div class="finish">Finish</div>
+        </div>
+        <div class="btn-wrapper">
+            <button id="place-bet" data-dialog-wrapper="betting-dialog" class="btn btn-pri">Place Bet</button>
+            <button id="start-race" class="btn btn-pri start-btn" disabled>Start Race</button>
+        </div>
+        <div id="player-info">
+            <div id="fund-balance" role="status"><span class="srn-reader-only">Fund Balance</span>$1000</div>
+            <div class="player">
+                <img class="player-icon" src="img/human-icon.png" >
+                <div id="player-info-name" class="player-name">Player 1</div>
+            </div>
+        </div>
+        <div id="page-mask"></div>
+        <div id="betting-dialog" tab-index="0" class="dialog" role="dialog"></div>
+        <div id="reset-dialog"  tab-index="0" class="dialog" role="dialog"></div>
+        <script src="js/fundManager.js"></script>
+        <script src="js/raceComponent.js"></script>
+        <script src="js/dialogManager.js"></script>
+        <script src="js/placeBetDialog.js"></script>
+        <script src="js/resetGameDialog.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

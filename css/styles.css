@@ -1,0 +1,286 @@
+body {
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: arial,sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.srn-reader-only {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+.container{
+    margin: 10px auto;
+}
+h1{
+    text-align: center;
+    font-size:3em;
+}
+
+#race-results{
+    text-align: center;
+    font-size: 1.5em;
+    color: #000;
+    padding: 20px 0 0 0;
+    height: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-wrapper{
+    text-align: center;
+}
+.btn.btn-pri{
+    font-size: 1.6em;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn.btn-pri:not([disabled]):hover{
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+.start-btn{
+    margin-left: 20px;
+}
+#race{
+    margin: 30px auto;
+    position: relative;
+    width:40%;
+
+}
+#race ul{
+    padding: 0;
+    margin: 0;  
+    }
+#race li{
+    list-style: none;
+    border: 1px solid #eee;
+    background: #ccc;
+    height: 60px;
+}
+
+#race li span.truck {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    margin-left:-65px;
+}
+
+#race li span.bet{
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    font-size: 1.1em;
+    text-align: right;
+    width: 48px;
+}
+#race .start, #race .finish{
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    font-size: 30px;
+    top: 50%;
+    color: #777171;
+}
+#race .finish{
+    right: -60px;
+    margin-top: -25px;
+}
+#race .start{
+    left: -50px;
+    margin-top: -20px;
+}
+
+.sprite {
+    background: url(../img/spritesheet.png) no-repeat 50%;
+}
+
+.truck-aqua {
+    background-position: -5px -5px;
+    color: aqua;
+}
+
+.truck-blue {
+    background-position: -79px -5px;
+    color: blue;
+}
+
+.truck-orange {
+    background-position: -5px -79px;
+    color: #cc880c;
+}
+
+.truck-purple {
+    background-position: -79px -79px;
+}
+
+.truck-red {
+    background-position: -153px -5px;
+    color: red;
+}
+
+.truck-green {
+    background-position: -153px -79px;
+    color: green;
+}
+
+.dialog{
+    display:none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border: solid 2px gray;
+    z-index: 200;
+    padding:20px;
+    width: 400px;
+    height: 350px;
+    margin-top: -170px;
+    margin-left: -220px;
+}
+
+.dialog .close{
+    position: absolute;
+    background: transparent;
+    font-size: 1.3em;
+    border: none;
+    right: 10px;
+    top: 10px;
+}
+
+.dialog .close:hover{
+    color:blue;
+}
+
+#page-mask {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.dialog .form-horizontal{
+    margin: 10px 20px;
+    font-size: 1.4em;
+}
+
+.dialog h2{
+    text-align: center;
+    margin: 30px 0 0;
+    font-size: 1.6em;
+}
+
+.dialog .form-group input[type="number"]{
+    float: right;
+    text-align: right;
+    width: 195px;
+}
+
+.dialog .form-group input[type="text"], .dialog .form-group select{
+    float: right;
+    width: 195px;
+}
+
+.dialog .form-group{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.dialog .btn-pri{
+    font-size: 1em;
+}
+
+.btn-pri[disabled]{
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+.dialog .button-wrap{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.dialog .msg{
+    font-size: 1.4em;
+    text-align: center;
+    height: 20px;
+    color: #f00;
+}
+
+#player-info{
+    width: 150px;
+    float: right;
+    display: flex;
+    margin-right: 250px;
+    margin-top: 30px;
+}
+
+#fund-balance{
+    font-size: 2em;
+    padding-top: 20px;
+}
+
+.player{
+    font-size: 1.2em;
+    text-align: center;
+}
+.player img{
+    width:50px;
+    height:50px;
+}
+
+@media (min-width : 320px) 
+and (max-width : 767px) {
+    #race {
+        width: 65%;
+        margin: 30px 90px;
+    }
+    #player-info{
+        margin-right: 50px;
+    }
+}
+
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+    #race {
+        width:60%;
+    }
+    #player-info{
+        margin-right: 100px;
+    }
+}
+
+
